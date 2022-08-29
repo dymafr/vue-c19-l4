@@ -15,8 +15,10 @@ export async function fetchProducts(
     query.append('skip', (page - 1) * 20 + '');
   }
   query.append('limit', '20');
-  query.append('price', `$lte:${filter.priceRange[1]}`);
-  query.append('price', `$gte:${filter.priceRange[0]}`);
+  query.append(
+    'price',
+    `{"$gte":${filter.priceRange[0]}, "$lte":${filter.priceRange[1]}}`
+  );
   const products = await (await fetch(`${BASE_URL}?${query}`)).json();
   return products;
 }
