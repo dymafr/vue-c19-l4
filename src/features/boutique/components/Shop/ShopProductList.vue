@@ -49,6 +49,8 @@ watch(page, () => {
 <style lang="scss" scoped>
 @use '../../../../assets/scss/mixins' as m;
 .grid {
+  grid-auto-rows: 400px;
+  gap: 20px;
   display: grid;
   grid-template-columns: 1fr;
   @include m.md {
@@ -60,7 +62,5 @@ watch(page, () => {
   @include m.xl {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  grid-auto-rows: 400px;
-  gap: 20px;
 }
 </style>

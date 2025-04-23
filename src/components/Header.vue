@@ -84,13 +84,13 @@ header {
   }
 
   i {
-    @include mixins.sm {
-      display: none;
-    }
     justify-self: end;
     color: white;
     font-size: 20px;
     cursor: pointer;
+    @include mixins.sm {
+      display: none;
+    }
   }
 
   .actions-container {
