@@ -25,7 +25,7 @@ import { seed40articles, seed } from './data/seed';
 
 <style lang="scss">
 @use './assets/scss/base.scss';
-@import './assets/scss/debug.scss';
+@use './assets/scss/debug.scss';
 
 .app-container {
   height: 100vh;
